@@ -35,7 +35,7 @@ SIGNAL (TIMER4_COMPA_vect) {
 
 void dataTick() {
     detachInterrupt(digitalPinToInterrupt(LINK_LIVE_PIN));
-    rawDataItems[currentTick] = TCNT4 - OCR4A;
+    rawDataItems[currentTick] = TCNT4 - OCR4B;
     ticked = true;
     currentTick++;
 }
