@@ -42,7 +42,7 @@ void dataTick() {
 
 SIGNAL (TIMER4_COMPB_vect) {
     digitalWrite(LINK_LIVE_PIN, HIGH);
-    pinMode(LINK_LIVE_PIN, INPUT_PULLUP);
+    pinMode(LINK_LIVE_PIN, INPUT);
     attachInterrupt(digitalPinToInterrupt(LINK_LIVE_PIN), dataTick, FALLING);
 }
 
